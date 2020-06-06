@@ -1,13 +1,13 @@
 {{ define "main" }}
-  <h1>{{ .Title }}</h1>
-  <ul>
-    {{ range .Data.Terms.Alphabetical }}
-      <li>
-        {{ printf "(%d)" .Count }}
-        <a href="{{ .Page.RelPermalink }}">
-          {{ .Page.Title }}
-        </a>
-      </li>
-    {{ end }}
-  </ul>
+<h2>{{lower .Title }}</h2>
+<ul>
+  {{ range .Data.Terms.Alphabetical }}
+  <li>
+    {{ printf "(%d)" .Count }}
+    <a href="{{ .Page.RelPermalink }}">
+      {{ .Page.Title }}
+    </a>
+  </li>
+  {{ end }}
+</ul>
 {{ end }}
